@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Năm Nhuận</title>
+</head>
+<body>
+<button type="button" onclick="showyear();">click here!!</button>
+<script>
+    function showyear() {
+        let year = parseInt(prompt("Nhập số năm "));
+        if (year % 4 == 0) {
+            if (year % 100 != 0) {
+                alert("đây đích thực là năm nhuận");
+            }
+            else if (year % 100 == 0) {
+                if (year % 400 == 0) {
+                    alert("đây là năm nhuận");
+                }
+                else {
+                    alert('đây không phải là năm nhuận');
+                }
+            }
+        }
+        else {
+            alert("đây không phải là năm nhuận");
+        }
+
+    }
+</script>
+
+</body>
+</html>

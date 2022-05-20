@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>demo</title>
+</head>
+<body>
+<button type="button" onclick="showif();">click here!!!</button>
+<script>
+    function showif() {
+        let a = prompt("hãy nhập vào số !!!");
+        hour = parseInt(a);
+        if (hour > 18) {
+            greeting = "goodday";
+        } else {
+            greeting = "not";
+        }
+        document.write(greeting);
+    }
+</script>
+</body>
+</html>
