@@ -20,11 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8f33cc97-9162-48a2-ae8b-795ff26745d3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/luyen_tap_if_else.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../ss7_var_variable/[Bài tập] Biến, kiểu dữ liệu và toán tử/Toan_tu_va.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss7_var_variable/[Bài tập] Biến, kiểu dữ liệu và toán tử/Toan_tu_va.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../ss7_var_variable/[Bài tập] Biến, kiểu dữ liệu và toán tử/dien_tich_hinh_tron.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss7_var_variable/[Bài tập] Biến, kiểu dữ liệu và toán tử/dien_tich_hinh_tron.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../ss7_var_variable/[Bài tập] Biến, kiểu dữ liệu và toán tử/nhiet_do.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss7_var_variable/[Bài tập] Biến, kiểu dữ liệu và toán tử/nhiet_do.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../New folder/.idea/workspace.xml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +50,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../[Thực hành] Luyện tập với cấu trúc if...else...if" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -71,7 +69,7 @@
       <option name="presentableId" value="Default" />
       <updated>1653044825292</updated>
       <workItem from="1653044826581" duration="3308000" />
-      <workItem from="1653049993922" duration="695000" />
+      <workItem from="1653049993922" duration="888000" />
     </task>
     <servers />
   </component>
@@ -91,10 +89,10 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1653048153516">
+    <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1653050887297">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1653048153516" />
+    <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1653050887297" />
     <state x="346" y="49" key="search.everywhere.popup" timestamp="1653046227004">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
