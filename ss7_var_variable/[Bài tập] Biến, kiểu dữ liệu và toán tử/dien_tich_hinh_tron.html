@@ -2,9 +2,22 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Tính diện tích hình tròn </title>
 </head>
 <body>
-$END$
+<button type="button" onclick="showPoint();">bấm vào!!</button>
+
+<script>
+    function showPoint() {
+        let rou = prompt("nhập bán kính ạ !!!");
+        const pi = 3.14;
+        let round = parseInt(rou);
+        let Pi = parseInt(pi);
+
+        let area = round*round*Pi;
+        document.write("diện tích hình tròn là: " + area);
+    }
+</script>
+
 </body>
 </html>

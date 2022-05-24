@@ -2,9 +2,18 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Điểm trung bình</title>
 </head>
 <body>
-$END$
+<button type="button" onclick="showPoint();">bấm vào!!</button>
+
+<script>
+    function showPoint() {
+        let cel = prompt("nhập nhiệt độ theo cel ạ !!!");
+        let Celsius = parseInt(cel);
+        let Fahrenheit = Celsius*9/5+32;
+        document.write("Nhiệt độ theo fah: " + Fahrenheit);
+    }
+</script>
 </body>
 </html>

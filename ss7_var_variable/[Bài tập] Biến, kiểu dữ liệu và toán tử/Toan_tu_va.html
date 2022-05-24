@@ -2,9 +2,22 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Điểm trung bình</title>
 </head>
 <body>
-$END$
+<button type="button" onclick="showPoint();">bấm vào!!</button>
+
+<script>
+    function showPoint() {
+        let li = prompt("nhập điểm lí ạ:");
+        let toan = prompt("nhập điểm toán ạ;");
+        let hoa = prompt("nhập điểm hóa ạ:");
+        let vatLi = parseInt(li);
+        let toanHoc = parseInt(toan);
+        let hoaHoc = parseInt(hoa);
+        let average = (vatLi + toanHoc + hoaHoc) / 3;
+        document.write("Điểm trung bình là: " + average);
+    }
+</script>
 </body>
 </html>
