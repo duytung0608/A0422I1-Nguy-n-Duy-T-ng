@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chỉ số cân nặng</title>
+</head>
+<body>
+<table>
+    <tr>
+        <th>Height</th>
+        <th>Weight</th>
+    </tr>
+    <tr>
+        <td>
+            <input type="text" id="height" width="200px">
+        </td>
+        <td><input type="text" id="weight" style="width: 200px"></td>
+        <td><button type="button" onclick="convert();">BMI</button></td>
+    </tr>
+    <p id="result"></p>
+
+
+</table>
+<script>
+    function convert() {
+        let height=parseFloat(document.getElementById("height").value);
+        let weight=parseFloat(document.getElementById("weight").value);
+        let BMI=weight/(height*2);
+        if (isNaN(height) || isNaN(weight) || height <=0 || weight<=0) {
+            document.getElementById("result").innerHTML = "<h3>Số tiền bạn nhập không phải là số hoặc là số âm</h3>"
+        } else if (BMI < 18.5) {
+            document.write("Underweight");
+        } else if(BMI < 25) {
+            document.write("Normal");
+        } else if(BMI < 30) {
+            document.write("Overweight");
+        } else {
+            document.write("Obese")
+        }
+    }
+</script>
+
+</body>
+</html>

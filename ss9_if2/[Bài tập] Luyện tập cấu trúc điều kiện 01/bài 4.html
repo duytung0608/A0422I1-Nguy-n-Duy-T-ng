@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Timg giá trị lớn nhất</title>
+</head>
+<body>
+<table>
+    <tr>
+        <td><input type="text" id="numa"></td>
+        <td><input type="text" id="numb"></td>
+        <td><input type="text" id="numc"></td>
+        <td><button type="button" onclick="max();">số nào lớn nhất</button></td>
+    </tr>
+</table>
+<script>
+    function max() {
+        let a = parseInt(document.getElementById("numa").value);
+        let b = parseInt(document.getElementById("numb").value);
+        let c = parseInt(document.getElementById("numc").value);
+        let maxvalue;
+        if (a>c) {
+            if(a>b) {
+                maxvalue = a;
+                alert("sô lớn nhất là " + maxvalue);
+            } else {
+                maxvalue = b;
+                alert("sô lớn nhất là " + maxvalue);
+            }
+        } else if(c>b) {
+            maxvalue = c;
+            alert("sô lớn nhất là " + maxvalue);
+        } else {
+            maxvalue = b;
+            alert("sô lớn nhất là " + maxvalue);
+        }
+    }
+</script>
+</body>
+</html>

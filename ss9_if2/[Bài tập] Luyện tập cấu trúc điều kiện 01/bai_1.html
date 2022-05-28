@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xem thử có chia hết hay không</title>
+</head>
+<body>
+<button type="button" onclick="check();">しよう</button>
+<script>
+    function check() {
+        let a = parseInt(prompt("nhập sô a"));
+        let b = parseInt(prompt("nhập số b"));
+        if (a % b == 0) {
+            document.write("a có chia hết cho b");
+        } else {
+            alert("a không chia hết cho b");
+        }
+
+
+
+    }
+
+</script>
+</body>
+</html>

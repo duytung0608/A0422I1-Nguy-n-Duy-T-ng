@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <tr>
+        <td><input type="text" id="homework"></td>
+        <td><input type="text" id="midtern"></td>
+        <td><input type="text" id="lasttern"></td>
+    </tr>
+    <tr>
+        <td><input type="reset" id="reset" name="Reset"></td>
+        <td><button type="button" onclick="cacular();">Kết quả</button></td>
+    </tr>
+</table>
+<script>
+    function cacular() {
+        let homework = parseInt(document.getElementById("homework").value);
+        let midtern = parseInt(document.getElementById("midtern").value);
+        let lasttern = parseInt(document.getElementById("lasttern").value);
+        let sum = (homework*0.2)+(midtern*0.3)+(lasttern*0.5);
+        if(sum < 5) {
+            alert("học ngu");
+        } else if (sum < 6.5) {
+            alert("học trung bình");
+        } else if (sum < 8) {
+            alert("học khá");
+        } else {
+            alert("học giỏi!!!");
+        }
+
+
+
+    }
+</script>
+</body>
+</html>
