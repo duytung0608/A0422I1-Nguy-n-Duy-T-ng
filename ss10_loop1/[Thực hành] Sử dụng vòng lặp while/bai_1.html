@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nhập đến -1 và tính tổng</title>
+</head>
+<body>
+<table>
+    <tr><th>Hãy nhập vào đến khi nào muốn dừng thì nhập -1</th></tr>
+    <tr>
+        <td><button type="button" onclick="convert();">bắt đầu thôi!!!</button></td>
+    </tr>
+</table>
+<script>
+    function convert() {
+        let sum=0;
+        var n=0;
+        while(n!=-1) {
+            n = parseFloat(prompt("hãy nhập vào số bạn muốn!"));
+            alert(n);
+            sum += n;
+        }
+        alert("tổng là " +sum);
+    }
+</script>
+</body>
+</html>

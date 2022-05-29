@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính tổng các số từ 1 đến N</title>
+</head>
+<body>
+<input type="text" id="number">
+<button type="button" onclick="convert();">bắt đầu!!!</button>
+<p id="result"></p>
+<script>
+    function convert() {
+        let n=parseFloat(document.getElementById("number").value);
+        let sum=0;
+        if (isNaN(n) || n<=0) {
+            document.getElementById("result").innerHTML="<h3>Số bạn nhập không phải số hoặc là số âm</h3>";
+        } else {
+            for (var i = 1; i <= n; i++) {
+                sum += i;
+            }
+            alert("vậy tổng là " + sum);
+        }
+    }
+</script>
+</body>
+</html>
