@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển từ mết sang feet</title>
+    <!--    <style>
+            table {
+                border: solid black;
+            }
+        </style>
+    -->
+</head>
+<body>
+<table border="">
+    <tr>
+        <th rowspan="3">Chuyển đổi từ mét sang feet!!!</th>
+        <th colspan="2">hãy nhập vào mét</th>
+    </tr>
+    <tr>
+        <td colspan="2"><input type="text" id="metter" style="width: 400px"></td>
+
+    </tr>
+    <tr>
+        <td colspan="2"><button type="button" onclick="convert();" style="width: 300px">Chuyển đổi sang giá trị feet</button></td>
+    </tr>
+    <p id="result"></p>
+</table>
+<script>
+    function convert() {
+        let metter = parseFloat(document.getElementById('metter').value);
+        if (isNaN(metter) || (metter<=0)) {
+            document.getElementById("result").innerHTML="<h3>Số mét bạn nhập vào không phải là số hoặc là số âm</h3>";
+        }else {
+            let sum = metter * 3.2808;
+            alert("giá trị theo feet " + sum);
+        }
+    }
+</script>
+</body>
+</html>

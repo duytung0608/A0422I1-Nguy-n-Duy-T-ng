@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tiền cước điện thoại của quý khách!!!</title>
+</head>
+<body>
+<table>
+    <tr>
+        <th>Hãy nhập số phút bạn đã gọi</th>
+    </tr>
+    <tr>
+        <td>(được ghi trong hóa đơn)</td>
+        <th>phí thuê bao cố định!!!</th>
+    </tr>
+    <tr>
+        <td><input type="text" id="minute"></td>
+        <td style="border: black">25000đ</td>
+        <td><button type="button" onclick="monney();">số tiền phải trả</button></td>
+    </tr>
+</table>
+<script>
+    function monney() {
+        let minute = parseFloat(document.getElementById("minute").value);
+        let money;
+        let sum=0;
+        if (minute <= 50) {
+            money = minute*600;
+        } else if (minute <= 200) {
+            money = 50*600+(minute-50)*400;
+        } else {
+            money = 50*600+150*400+(minute-200)*200;
+        }
+        sum = 25000+money;
+        alert("số tiền quý khách phải trả là " + sum);
+    }
+</script>
+</body>
+</html>

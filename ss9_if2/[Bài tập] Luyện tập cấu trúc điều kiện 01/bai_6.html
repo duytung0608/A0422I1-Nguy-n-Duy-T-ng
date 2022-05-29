@@ -14,15 +14,18 @@
 </table>
 <script>
     function monney() {
-        let money = parseInt(document.getElementById("money").value);
+        let money = parseFloat(document.getElementById("money").value);
         let rose;
         if(money <= 300) {
             rose= money*(3/100);
-        } else if(money <= 500) {
-            rose = (money-300)*(4/100);
-        } else if<
-
-
+            alert("hoa hồng nhận được là " + rose);
+        } else if(money <=500) {
+            rose = 300*(3/100)+(money-300)*(4/100);
+            alert("hoa hồng nhận được là " + rose);
+        } else if(money <= 900) {
+            rose = 300*(3/100)+(500-300)*(4/100)+(money-500)*(6/100);
+            alert("hoa hồng nhận được là " + rose);
+        }
     }
 </script>
 </body>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển từ độ C sang độ F</title>
+<!--    <style>
+        table {
+            border: solid black;
+        }
+    </style>
+-->
+</head>
+<body>
+<table border="">
+    <tr>
+        <th rowspan="3">Chuyển đội độ C sang các giá trị nhiệt độ khác</th>
+        <th colspan="2">hãy nhập vào độ c</th>
+    </tr>
+    <tr>
+        <td colspan="2"><input type="text" id="tempe" style="width: 400px"></td>
+
+    </tr>
+    <tr>
+        <td><button type="button" onclick="convert1();">Chuyển đổi sang giá trị F</button></td>
+        <td><button type="button" onclick="convert2();">Chuyển đổi sang giá trị k</button></td>
+    </tr>
+</table>
+<script>
+    function convert1() {
+        let tempe = parseFloat(document.getElementById('tempe').value);
+        let sum = tempe+9/5+32;
+        alert("giá trị theo độ F " + sum);
+
+    }
+    function convert2() {
+        let tempe = parseFloat(document.getElementById('tempe').value);
+        let sum = tempe+273.15;
+        alert("giá trị theo độ K " + sum);
+    }
+</script>
+</body>
+</html>
