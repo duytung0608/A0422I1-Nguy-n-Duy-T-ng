@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>hiển thị số lượng N số nguyên tố đầu tiên</title>
+</head>
+<body>
+<table>
+    <tr>
+        <th>bạn muốn hiển thị bao nhiêu số nguyên tố!!!</th>
+    </tr>
+    <tr>
+        <td><input type="text" id="number"></td>
+        <td><button type="button" onclick="convert();">bắt đầu!!!</button></td>
+    </tr>
+    <p id="result"></p>
+</table>
+<script>
+    function convert() {
+        let num = parseInt(document.getElementById("number").value);
+        if (isNaN(num) || num < 0) {
+            document.getElementById("result").innerHTML = "<h3>Số bạn vừa nhập vào nào có phảí đúng yêu cầu!</h3>"
+        } else {
+            let count = 0;
+            let b = 1;
+            for (let i = 1; count < num; i++) {
+                if (i < 2) {
+                    i++;
+                }
+                for (j = 2; j < i - 1; j++) {
+                    if (i % j == 0) {
+                        b = 0;
+                    }
+                }
+                if (b == 1) {
+                    count++;
+                    document.write(i+"<br>");
+                }
+                b = 1;
+
+            }
+        }
+    }
+</script>
+</body>
+</html>
