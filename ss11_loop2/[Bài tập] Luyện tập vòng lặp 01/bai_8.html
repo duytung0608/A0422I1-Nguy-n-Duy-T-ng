@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hãy thử đoán xem nào</title>
+</head>
+<body>
+<table>
+    <tr><button type="text" onclick="convert();">chơi!!</button></tr>
+</table>
+<script>
+    function convert() {
+        for (let i=0;;i++) {
+            let a = parseInt(prompt("bạn muốn đoán trong khoảng nào / Từ bao nhiêu?:"));
+            let b = parseInt(prompt("đến bao nhiêu?:"));
+            let c = Math.floor(Math.random() * b) + a;
+            let guest = parseInt(prompt("hãy nhập số bạn đoán !!"));
+            if (guest == c) {
+                alert("Xin chúc mừng bạn đã đoán trúng!!!");
+                break;
+            } else if (guest>c) {
+                alert("sô bạn nhập đã lớn hơn số cần đoán!!");
+            } else {
+                alert("Số bạn đoán nhỏ hơn số cần đoán!!!");
+            }
+
+        }
+    }
+</script>
+</body>
+</html>

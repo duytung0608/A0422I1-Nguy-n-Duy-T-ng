@@ -2,9 +2,35 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Phòng bạn nhiệt độ đang là bao nhiêu</title>
+    <title>Phòng bạn nhiệt độ đang là bao nhiêu!!!</title>
 </head>
 <body>
-
+<table>
+    <tr><th>hãy xem nhiệt kế rồi điền nhiệt độ trong phòng của bạn hiện tại là bao nhiêu</th></tr>
+    <tr>
+        <td><input type="text" id="ondo"></td>
+        <td><button type="button" onclick="convert();">hãy để tôi tư vấn!!!</button></td>
+    </tr>
+    <p id="result"></p>
+</table>
+<script>
+    function convert() {
+        let ondo = parseFloat(document.getElementById("ondo").value);
+        if (isNaN(ondo) || ondo < 0) {
+            document.getElementById("result").innerHTML="<h3>bạn đang nhập sai số hoặc bạn hiện đang không ở VN</h3>";
+        } else {
+            for(let i=1;i<ondo;i++) {
+                if (ondo>100) {
+                    alert("xin vui lòng hạ nhiệt độ");
+                    break;
+                }
+                if (ondo<20) {
+                    alert("làm ơn tắng  nhiệt độ lên đi ạ");
+                    break;
+                }
+            }
+        }
+    }
+</script>
 </body>
 </html>

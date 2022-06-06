@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+​
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+​
+<body>
+<table>
+    <tr>
+        <th>số vốn ban đầu</th>
+        <th>gói lãi suất bạn muốn</th>
+        <th>bạn sẽ gửi trong bao lâu</th>
+        <th></th>
+    </tr>
+    <tr>
+        <td><input type="text" width="200px" id="monney"></td>
+        <td><select style="width: 200px" id="laisuat">
+            <option value="0.5">0.5</option>
+            <option value="0.75">0.75</option>
+        </select></td>
+        <td><select style="width: 200px;" id="howlong">
+            <option value="24">24</option>
+            <option value="36">36</option>
+        </select></td>
+        <td>
+            <button onclick="convert()">Convert</button>
+        </td>
+    </tr>
+    <div id="result"></div>
+</table>
+<script>
+    function convert() {
+        let mon = parseFloat(document.getElementById("monney").value);
+        let lai = parseFloat(document.getElementById("laisuat").value);
+        let howlo = parseFloat(document.getElementById("howlong").value);
+        if (isNaN(mon) || mon <=0) {
+            document.getElementById("result").innerHTML = "<h3>Số tiền bạn nhập không phải là số hoặc là số âm</h3>"
+        } else {
+            let sum=mon;
+            for (let i=0;i<howlo;i++) {
+                sum = sum + (sum*lai);
+            }
+            alert(sum);
+            alert(mon*Math.pow((1+lai),howlo));
+        }
+    }
+</script>
+</body>
+​
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dãy fibonaci</title>
+</head>
+<body>
+<table>
+    <tr>
+        <th>Bạn muốn hiển thị bao nhiêu số trong dãy fibonaci</th>
+    </tr>
+    <tr>
+        <td><input type="text" id="number"></td>
+        <td><button type="button" onclick="convert();">bắt đầu thôi!!!</button></td>
+    </tr>
+    <p id="result"></p>
+</table>
+<script>
+    function convert() {
+        let num = parseInt(document.getElementById("number").value);
+        let a=0;
+        let b=1;
+        let sum=0,c;
+        if (isNaN(num) || num<0) {
+            document.getElementById("result").innerHTML="<h3>Số bạn nhập không phù hợp</h3>"
+        } else {
+            for (let i = 0; i < 20; i++) {
+                c = a + b;
+                document.write(i+":"+c+"<br>");
+                sum+=c;
+                a = b;
+                b = c;
+            }
+            document.write(sum);
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>in ra số từ 1 đến 100</title>
+</head>
+<body>
+<table>
+    <tr>
+        <th>Bạn muốn hiển thị bao nhiêu số (luôn 100 :)) </th>
+    </tr>
+    <tr>
+        <td><input type="text" id="number"></td>
+        <td><button type="button" onclick="convert();">bắt đầu thôi!!!</button></td>
+    </tr>
+    <p id="result"></p>
+</table>
+<script>
+    function convert() {
+        let num = parseInt(document.getElementById("number").value);
+        if (isNaN(num) || num<0) {
+            document.getElementById("result").innerHTML="<h3>Số bạn nhập không phù hợp</h3>"
+        } else {
+            for (let i = 1; i <= 100; i++) {
+                if (i%3==0) {
+                    document.write("fizz"+"&nbsp&nbsp");
+                } else if (i%5==0) {
+                    document.write("buzz"+"&nbsp&nbsp");
+                } else if (i%3==0 && i%5==0) {
+                    document.write("fizzbuzz"+"&nbsp&nbsp");
+                } else {
+                    document.write(i+"&nbsp&nbsp");
+                }
+            }
+        }
+    }
+</script>
+</body>
+</html>
