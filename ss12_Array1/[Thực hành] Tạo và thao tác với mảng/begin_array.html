@@ -24,9 +24,10 @@
         document.getElementById("txtvalue").value = "";
     }
     function display_array() {
-        var e = "<hr/>";
+        alert(array.length);
+        let e = "<hr/>";
         for (let i=0;i<array.length;i++) {
-            e = "Element " + i + " = " + array[i] + "<br>";
+            e += "Element " + i + " = " + array[i] + "<br/>";
             //document.getElementById("result").innerHTML = e;
         }
        document.getElementById("result").innerHTML = e;
