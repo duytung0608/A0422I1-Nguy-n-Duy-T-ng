@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Search Array</title>
+</head>
+<body>
+<table>
+    <tr>
+        <td><input type="text" id="number"></td>
+        <td><input type="button" value="let go" onclick="convert();"></td>
+    </tr>
+    <p id="result"></p>
+</table>
+<script>
+    function convert() {
+        let number = parseInt(document.getElementById("number").value);
+        if (isNaN(number)) {
+            document.getElementById("result").innerHTML="<h2>giá trị bạn nhập không phải số!!!</h2>";
+        } else {
+            let arr1 = [2, 4, 5, -6, 8, 9];
+            for (let i in arr1) {
+                if (number == arr1[i]) {
+                    alert("số bạn nhập có trong mảng, ở vị trí " + arr1[i]);
+                }
+            }
+        }
+    }
+</script>
+</body>
+</html>

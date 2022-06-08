@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Search maxvalue in Array</title>
+</head>
+<body>
+<table>
+    <tr>
+        <td><input type="button" value="let go" onclick="convert();"></td>
+    </tr>
+</table>
+<script>
+    function convert() {
+        let arr1 = [2, 4, 14, -6, 8, 9,5];
+        let max=0;
+        for (let i in arr1) {
+            if (max < arr1[i]) {
+                max = arr1[i];
+            }
+        }
+        alert(max);
+    }
+</script>
+</body>
+</html>
