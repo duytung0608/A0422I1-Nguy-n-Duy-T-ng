@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <input type="button" value="let go!!!" onclick="convert();">
+        </tr>
+    </table>
+    <script>
+        function convert() {
+            let mynumber = [0,2,4,5,6,7,8,12];
+            let str = mynumber.toString();
+            for (let i=0;i<str.length;i++) {
+                if(mynumber[i]%2==0 && mynumber[i+1]%2==0) {
+                    mynumber.splice(i+1,0,"-");
+                }
+            }
+            console.log(mynumber.join(''));
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tra từ điển</title>
+</head>
+<body>
+<table>
+    <tr>
+        <td><input type="text" id="yourtext"></td>
+        <td><button type="button" onclick="convert();">Tra Cứu!!!</button></td>
+    </tr>
+    <p id="result"></p>
+</table>
+<script>
+    function convert() {
+        let yourtext = document.getElementById("yourtext").value;
+        let Eng = ['car','bike','lake','chair','desk','pig'];
+        let VN = ['ô tô','xe máy','hồ','cái ghế','cái bàn'];
+        for(let i=0;i<Eng.length;i++) {
+            if (yourtext == Eng[i]) {
+                if(Eng.indexOf(yourtext)<=VN.length-1) {
+                    alert(VN[i]);
+                    break;
+                }
+            } else if (yourtext == VN[i]) {
+                if(VN.indexOf(yourtext)<=Eng.length-1) {
+                    alert(Eng[i]);
+                    break;
+                }
+            } else if(i == 5) {
+                    alert("khồn có từ có nghĩa tương ứng trong từ điển");
+                }
+        }
+
+    }
+</script>
+</body>
+</html>
