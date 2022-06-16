@@ -7,13 +7,12 @@
 <body>
 <script>
     function check_Number(number) {
-        if (isNaN(num)) {
-            return true;
-        } else {
+        if (isNaN(number))
             return false;
-        }
+        return true;
     }
-    let numb = parseInt(prompt("nhập"))
+    let numb = parseInt(prompt("nhập vào sô"));
+    alert(check_Number(numb));
 </script>
 </body>
 </html>

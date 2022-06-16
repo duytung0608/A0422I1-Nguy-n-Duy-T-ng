@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đảo ngược mảng với hàm</title>
+</head>
+<body>
+<form>
+    <p>
+        <label>tạo mảng nào!!!</label>
+    </p>
+    <p>
+        <input type="text" id="number">
+        <button type="button" onclick="addArray();">Add</button>
+        <button type="button" onclick="daoMang();">Đảo mảng</button>
+    </p>
+</form>
+<script>
+    let i = 0;
+    let A = Array();
+    function addArray() {
+        A[i] = document.getElementById("number").value;
+        alert("Element: " + A[i] + " Added at index " + i);
+        i++;
+        document.getElementById("number").value = "";
+    }
+    function daoMang() {
+        let first = 0;
+        let last = A.length-1;
+        while(first<last) {
+            let b = A[first]
+            A[first] = A[last];
+            A[last] = b;
+            first++;
+            last--;
+        }
+        document.write(A);
+    }
+    // Hỏi về vấn đề mà tham chiếu(thêm tham số và đối số) thì đéo chạy mà không có tham chiếu thì thuật toán được thực thi
+
+</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Trả về số lần xuất hiện chuỗi trong mảng</title>
+</head>
+<body>
+<script>
+    let Eng = ['car','bike','lake','chair','desk','pig','bike','car'];
+    function convert(arr,str) {
+        let count = 0;
+        for (let i=0;i<arr.length;i++) {
+            if (str == arr[i]) {
+                count++;
+            }
+        }
+        if (count>0)
+            return count;
+        return -1;
+    }
+    let str = prompt("nhập vào chuôi:");
+    alert(convert(Eng,str));
+</script>
+</body>
+</html>

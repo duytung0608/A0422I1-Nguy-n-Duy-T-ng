@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Có phải là số nguyên dương hay không đây</title>
+</head>
+<body>
+<script>
+    function check_inter(number) {
+        if (isNaN(number) || number<0)
+            return false;
+        return true;
+    }
+    let a = parseInt(prompt("nhập số vào đi mày"));
+    alert(check_inter(a));
+</script>
+</body>
+</html>
