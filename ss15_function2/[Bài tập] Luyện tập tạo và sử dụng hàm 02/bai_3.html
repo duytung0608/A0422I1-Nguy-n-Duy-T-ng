@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính giai thừa!!!</title>
+</head>
+<body>
+<script>
+    function giai_Thua(num) {
+        if (num==1)
+            return 1;
+        return num * giai_Thua(num-1);
+    }
+    let number = parseInt(prompt("nhập số vào"));
+    alert(giai_Thua(number));
+</script>
+</body>
+</html>

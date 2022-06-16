@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tìm ngôi sao tương ứng</title>
+</head>
+<body>
+<script>
+    function searchStar(str) {
+        for(i=0;i<arr1.length;i++) {
+            if (str == arr1[i]) {
+                if (arr1.indexOf(str) <= arr2.length-1) {
+                    alert(arr2[i]);
+                    break;
+                }
+            }
+        }
+    }
+    let arr1 = ['Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe', 'Regulus'];
+    let arr2 = [ 'Ursa Minor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'Ursa Major', 'Leo'];
+    let star = prompt("nhập vào tên ngôi sao");
+    searchStar(star);
+</script>
+</body>
+</html>

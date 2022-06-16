@@ -21,16 +21,18 @@
             if (yourtext == Eng[i]) {
                 if(Eng.indexOf(yourtext)<=VN.length-1) {
                     alert(VN[i]);
+                } else {
+                    alert("Không có từ tiếng việt tương ứng");
                     break;
                 }
             } else if (yourtext == VN[i]) {
                 if(VN.indexOf(yourtext)<=Eng.length-1) {
                     alert(Eng[i]);
+                } else {
+                    alert("không có tư tiếng anh tương ứng");
                     break;
                 }
-            } else if(i == 5) {
-                    alert("khồn có từ có nghĩa tương ứng trong từ điển");
-                }
+            }
         }
 
     }

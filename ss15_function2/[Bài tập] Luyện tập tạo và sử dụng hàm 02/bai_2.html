@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính diện tích và chu vi hình tròn</title>
+</head>
+<body>
+<form>
+    <p>
+        <label>Bán kính</label>
+        <input id="inputFahrenheit" type="number" placeholder="Fahrenheit"
+               oninput="dien_Tich_tron(this.value)"
+               onchange="dien_Tich_tron(this.value)">
+    </p>
+    <p>Diện Tích: <span id="outputS"></span></p>
+    <p>
+        <label>Fahrenheit</label>
+        <input id="inputFahrenheit" type="number" placeholder="Fahrenheit"
+               oninput="chu_Vi_tron(this.value)"
+               onchange="chu_Vi_tron(this.value)">
+    </p>
+    <p>Chu Vi: <span id="outputC"></span></p>
+</form>
+
+<script>
+
+    function dien_Tich_tron(rNum) {
+        rNum = parseFloat(rNum);
+        document.getElementById("outputS").innerHTML = rNum*rNum*3.14;
+    }
+    function chu_Vi_tron(Num) {
+        Num = parseFloat(Num);
+        document.getElementById("outputC").innerHTML = Num*2*3.14;
+    }
+
+</script>
+</body>
+</html>
