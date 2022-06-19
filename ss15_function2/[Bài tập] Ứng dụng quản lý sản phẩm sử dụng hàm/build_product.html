@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ứng dụng quản lí sản phẩm</title>
+</head>
+<body>
+<h1>Add New Product</h1>
+<p>
+    <input type="text" id="value">
+    <input type="button" value="Add" onclick="addProduct();">
+</p>
+<h1>Display All Product</h1>
+<p id="product"></p>
+
+<script>
+    let b = document.getElementById("product");
+    let arr1 = ["Sony Xperia", "Samsung Galaxy", "Nokia 6", "Xiaomi Redmi Note 4", "Apple iphone 6S", "Oppo A71", "Fujitsu F-04E"];
+    function displayProduct(arr) {
+        let sum = "<table border='1' width='800' cellpadding='1' cellspacing='0'>";
+        for (let i=0;i<arr.length;i++) {
+            sum  =  sum + "<tr>"
+            let a = i+1;
+            sum = sum + "<td>" + a +"</td>";
+            sum = sum + "<td>" + arr[i] + "</td>";
+            sum = sum + "<td>" + "<input type='button' value='Edit' onclick='editProduct("+i+");'>" + "</td>"
+            sum = sum + "<td>" + "<input type='button' onclick='clearProduct("+i+");' value='Clear'>" + "</td>";
+            sum = sum + "</tr>";
+        }
+        return sum;
+    }
+    function clearProduct(index) {
+        arr1.splice(index,1);
+        b.innerHTML=displayProduct(arr1);
+    }
+    function editProduct(vitri) {
+        let naiyou = prompt("tên sản phẩm bạn muốn sửa");
+        arr1[vitri] = naiyou;
+        b.innerHTML=displayProduct(arr1);
+    }
+    function addProduct() {
+        let valu = document.getElementById("value").value;
+        arr1.push(valu);
+        b.innerHTML=displayProduct(arr1)
+    }
+    b.innerHTML=displayProduct(arr1);
+</script>
+</body>
+</html>
