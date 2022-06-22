@@ -10,6 +10,102 @@
         this.batery = bater;
 
     }
+
+    //inbox, sent, compose => array.
+    class Phone {
+        constructor(name, battery, status) {
+            this.name = name;
+            this.battery = battery;
+            this.status = status;
+            this.inbox = [];
+            this.sent = [];
+            this.compose = ["abc", "mmm"];
+        }
+
+        // chuyển trạng thái của đt
+        isStatus() {
+            // this.status = !this.status;
+            if (this.status) {
+                this.status = false;
+            } else {
+                this.status = true;
+            }
+        }
+
+        // Pin tối ta 100. pin < 5 => xạc tới 100;
+        chargeBattery() {
+            while (this.battery <= 100) {
+                this.battery += 0.000001;
+            }
+        }
+
+        viewInbox() {
+            if (this.status) {
+                if (this.battery > 1) {
+                    let tempInbox = "Inbox of " + this.name + ': \n';
+                    for (let i = 0; i < this.inbox.length; i++) {
+                        tempInbox += this.inbox[i] + "\n";
+                    }
+                    alert(tempInbox);
+                    --this.battery;
+                } else {
+                    alert("vui long sac pin")
+                }
+            }
+        }
+
+        viewSent() {
+            if (this.status) {
+                if (this.battery > 1) {
+                    let tempSent = "Sent of " + this.name + ': \n';
+                    for (let i = 0; i < this.sent.length; i++) {
+                        tempSent += this.sent[i] + "\n";
+                    }
+                    alert(tempSent);
+                    --this.battery;
+                } else {
+                    alert("vui long sac pin")
+                }
+            }
+        }
+
+
+        writeSms(obj) {
+            if (this.status) {
+                if (this.battery > 1) {
+
+                    //Chưa có thư trong hộp thư chờ
+                    if (this.compose.length === 0) {
+                        let tempSms = prompt("Viet tin nhan");
+                        this.compose.push(tempSms);
+                        obj.inbox.push(tempSms);
+                        --this.battery;
+                    } else {
+                        // Đã có thư trong hộp thư chờ và đợi gửi.
+                        let tempCompose = "Compose of " + this.name + ': \n';
+                        for (let i = 0; i < this.compose.length; i++) {
+                            tempCompose += "" + (i + 1) + ". " + this.compose[i] + "\n";
+                        }
+                        let choose = parseInt(prompt("Chon thư muốn gửi \n" + tempCompose ));
+                        obj.inbox.push(this.compose[choose - 1]);
+                        this.compose.splice(choose-1,1);
+                        this.sent.push(this.compose[choose - 1]);
+                    }
+
+                } else {
+                    alert("vui long sac pin")
+                }
+            }
+        }
+    }
+
+    let iphone = new Phone("Iphone", 50, true);
+    let xiaomi = new Phone("Xiaomi", 50, true);
+    iphone.writeSms(xiaomi);
+    xiaomi.viewInbox();
+    alert(iphone.compose);
+    iphone.viewSent();
+
 </script>
 </body>
 </html>
