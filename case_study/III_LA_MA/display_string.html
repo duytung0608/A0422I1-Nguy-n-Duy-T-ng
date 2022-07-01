@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function daonguoc(n) {//123
+        let reNum = n%10; //3
+        n = Math.floor(n/10);//12.3
+        let last;
+        debugger
+        while(n>0){
+            last = n%10;
+            n = Math.floor(n/10);
+            reNum = reNum*10+last;
+        }
+        return reNum;
+    }
+    function displayString(a) {
+        switch (a) {
+            case 1:
+                document.write("Một");
+                break;
+            case 2:
+                document.write("Hai");
+                break;
+            case 3:
+                document.write("Ba");
+                break;
+            case 4:
+                document.write("Bốn");
+                break;
+            case 5:
+                document.write("Năm");
+                break;
+            case 6:
+                document.write("Sáu");
+                break;
+            case 7:
+                document.write("Bảy");
+                break;
+            case 8:
+                document.write("Tám");
+                break;
+            case 9:
+                document.write("Chín");
+                break;
+            default:
+                document.write("Không");
+                break;
+        }
+    }
+    let numb = parseInt(prompt("Hãy nhập số bạn muốn đọc:"));
+    debugger
+    let reNum = daonguoc(numb);
+    //document.write(reNum+"<br>");
+    let last;
+    while (reNum>0){
+        last = reNum%10;
+        displayString(last);
+        reNum = Math.floor(reNum/10);
+    }
+</script>
+</body>
+</html>

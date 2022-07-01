@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    <p>
+        <h2>Tạo Mảng</h2>
+    </p>
+    <p>
+        <button type="button" onclick="builtArray();">Tạo Mảng mới!!!(theo đề bài)</button>
+    </p>
+    <p>
+        <input type="text" id="number">
+        <button type="button" onclick="addAray();">Add</button>
+        <button type="button" onclick="disPlayArray();">Display</button>
+
+    </p>
+    <p id="result"></p>
+    <P id="result2"></P>
+    <P id="result3"></P>
+</form>
+<script>
+    let A = new Array();
+    let i = 0;
+    let B = new Array();
+    function addAray() {
+        A[i] = parseInt(document.getElementById("number").value);
+        alert("thêm phần tử thứ "+ i + " : " + A[i]);
+        document.getElementById("number").value="";
+        i++;
+    }
+    function disPlayArray() {
+        alert(A.length);
+        let e = "<hr/>";
+        for(let i=0;i<A.length;i++) {
+            e += document.getElementById("result").innerHTML="A["+ i + "]"+" : " + A[i] + "<br/>";
+        }
+        document.getElementById("result").innerHTML=e;
+        document.getElementById("result2").innerHTML=A;
+    }
+    function builtArray() {
+        for (let i=0;i<A.length;i++) {
+            for(let j=0;j<=i;j++) {
+                let a = parseInt(A[j]);
+                //B[i] = (B[i]==undefined?0:B[i]) + a;
+                debugger
+                B[i] = B[i]+a;
+
+            }
+        }
+        document.getElementById("result3").innerHTML=B;
+    }
+
+</script>
+</body>
+</html>

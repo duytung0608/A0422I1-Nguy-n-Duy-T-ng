@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p id="result"></p>
+<script>
+    let a = parseInt(prompt("nhập lương nhân viên:\nTính theo đơn vị triệu đồng"));
+    let mon;
+    if(a>15) {
+        document.getElementById("result").innerHTML = "<h2>Số lượng bạn nhập không đúng yêu cầu bài toán, Xin mời nhập lại</h2>";
+    } else if (a==15) {
+        mon = a*20/100;
+        alert("Số tiền thuế nhân viên đó phải trả là :\n" + mon + " Triệu Đồng");
+        alert("Số lương ròng nhân viên đó nhận được:\n(số tiền thực sự nhận được)\n" + (a-mon) + " Triệu Đồng");
+    }
+    else if (a>=7) {
+        mon = a*10/100;
+        let b = a-mon;
+        alert("Số tiền thuế nhân viên đó phải trả là :\n" + mon + " Triệu Đồng");
+        alert("Số lương ròng nhân viên đó nhận được:\n(số tiền thực sự nhận được)\n" + b +" Triệu Đồng" );
+    }else {
+        mon = a*5/100;
+        let b = a-mon;
+        alert("Số tiền thuế nhân viên đó phải trả là :\n" + mon + " Triệu Đồng");
+        alert("Số lương ròng nhân viên đó nhận được:\n(số tiền thực sự nhận được)\n" + b + " Triệu Đồng");
+    }
+</script>
+</body>
+</html>

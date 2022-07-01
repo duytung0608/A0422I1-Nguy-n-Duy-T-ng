@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function checkCo(a) {
+        for(let i=0;i<A.length;i++){
+            if(a==A[i]){
+                return 0;
+            }
+        }
+        return 1;
+    }
+    function checkNewArray(b) {
+        for(let i=0;i<C.length;i++){
+            if(b==C[i]){
+                return 0;
+            }
+        }
+        return 1;
+    }
+    let A = [1,2,4,8,6,4];
+    let B = [2,9,4,3,1,9,7,5];
+    let C = []
+    for(let i=0;i<B.length;i++){
+        let tu=checkCo(B[i]);
+        if(tu==0){
+            continue;
+        }else if(a=1){
+            let ng = checkNewArray(B[i]);
+            if(ng==0) {
+                continue;
+            }else {
+                C.push(B[i]);
+            }
+        }
+    }
+    document.write(C);
+</script>
+</body>
+</html>
