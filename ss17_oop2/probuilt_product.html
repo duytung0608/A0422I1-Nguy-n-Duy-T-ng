@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Product</title>
+</head>
+<body>
+<h1>Add new Product</h1>
+<table>
+    <tr>
+        <th>Name</th>
+        <th>ID</th>
+        <th>Cost</th>
+    </tr>
+    <tr>
+        <td><input type="text" id="name"></td>
+        <td><input type="text" id="id"></td>
+        <td><input type="text" id="cost"></td>
+        <td><button type="button" onclick="addNewProduct();">Add newProduct</button></td>
+    </tr>
+    <p id="result"></p>
+</table>
+<script>
+    let A = [];
+    let sum = "<table>";
+    sum += "<tr>" + "<th>" + "STT" + "</th>";
+    sum += "<th>" + "NAME" + "</th>";
+    sum += "<th>" + "ID" + "</th>";
+    sum += "<th>" + "COST" + "</th>";
+    class Product {
+     constructor(name, id, cost) {
+         this.name = name;
+         this.id = id;
+         this.cost = cost;
+     };
+     getName() {
+         return this.name;
+     }
+     setName(newname) {
+         this.name = newname;
+     }
+     getId() {
+         return this.id;
+     }
+     setId(newid) {
+         this.id = newid;
+     }
+     getCost() {
+         return this.cost;
+     }
+     setCost(newcost) {
+         this.cost = newcost;
+     }
+ }
+ function pushArray(A,B) {
+        return A.push(B);
+ }
+ function displayProduct(A) {
+    for(let i=0;i<A.length;i++) {
+        sum += "<tr>" + "<td>" + A[i].this.name + "</td>";
+        sum += "<td>" + A[i].this.id
+    }
+ }
+</script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let m = parseInt(prompt("nhập m:"));
+    let n = parseInt(prompt("nhập n:"));
+    let sum;
+    let A = new Array();
+    sum = "<table border='1' width='800' cellspacing='0' cellpadding='1'>";
+    for (let i = 0; i < m; i++) {
+        sum = sum + "<tr>";
+        A[i] = new Array();
+        for (let j = 0; j < n; j++) {
+            A[i][j] = Math.floor(Math.random() * 10)
+            sum = sum + "<td>" + A[i][j] + "</td>";
+        }
+        sum = sum + "</tr>";
+    }
+    document.write(sum);
+</script>
+</body>
+</html>

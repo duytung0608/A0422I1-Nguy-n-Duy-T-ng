@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function maxArray(A) {
+        let max = A[0][0];
+        for(let i=0;i<A.length;i++) {
+            for (let k=0;k<A[i].length;k++) {
+                if(A[i][k]>max){
+                    max = A[i][k];
+                }
+            }
+        }
+        return max;
+    }
+    function minArray(A) {
+        let min = A[0][0];
+        for(let i=0;i<A.length;i++) {
+            for (let k=0;k<A[i].length;k++) {
+                if(A[i][k]<min){
+                    min = A[i][k];
+                }
+            }
+        }
+        return min;
+    }
+    let A = [[-7,2,-9],[4,36,8],[54,3,5]]
+    let max = maxArray(A);
+    let min = minArray(A);
+    alert(max);
+    alert(min);
+</script>
+</body>
+</html>
