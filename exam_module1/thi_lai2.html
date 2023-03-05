@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 2</title>
+</head>
+<body>
+<script>
+    let x = 0;
+    let str = Array();
+    var UPPER = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    let count = 0;
+    function demSoluong(str) {
+        str =prompt("Hãy nhập chuỗi kí tự bạn muốn");
+        for (var i = 0; i < str.length; i++) {
+            if (UPPER.indexOf(str[i]) !== -1) {
+                count++;
+            }
+        }
+        if(count==0){
+            alert("The String is not contain upper char");
+        }else {
+            alert(count);
+        }
+    }
+    demSoluong(str);
+</script>
+</body>
+</html>

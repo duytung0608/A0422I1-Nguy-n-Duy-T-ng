@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 3</title>
+</head>
+<body>
+<script>
+    let long = parseInt(prompt("hãy nhập đọ dài mảng mà bạn muốn!!"));
+    let array1 = new Array();
+    let array2 = [];
+    if(isNaN(long)) {
+        document.getElementById("result").innerHTML = "<h3>Hãy nhập độ dài bé hơn hoặc bằng 20</h3>";
+    }else{
+        for(let i=0;i<long;i++) {
+            let number = parseInt(prompt("hãy nhập phần tử cho " + "A[" + i + "]"));
+            array1[i] = number;
+        }
+        for (let i=0;i<array1.length;i++) {
+            if(isPrime(array1[i])==1) {
+                array2.push(array1[i]);
+            }
+        }
+        for(let i=0;i<array2.length;i++){
+            for(let k=i+1;k<array2.length;k++){
+                if(array2[i]>array2[k]){
+                    let temp = array2[i];
+                    array2[i] = array2[k];
+                    array2[k] = temp;
+                }
+            }
+        }
+        alert("Hàm được trả về là " + array2);
+    }
+    function isPrime(number) {
+        if (number==1)
+            return -1;
+        if (number==2)
+            return 1;
+        for (let i=2;i<=Math.sqrt(number);i++) {
+            if (number%i==0)
+                return -1;
+        }
+        return 1;
+    }
+</script>
+</body>
+</html>

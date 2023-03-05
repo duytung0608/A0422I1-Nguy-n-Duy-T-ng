@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p id="result"></p>
+<script>
+    class Phone {
+        constructor(id, name, brand, cost) {
+            this.id = id;
+            this.name = name;
+            this.brand = brand;
+            this.cost = cost;
+        }
+
+        setId(id) {
+            this.id = id;
+        }
+
+        getId() {
+            return this.id;
+        }
+
+        setName(name) {
+            this.name = name;
+        }
+
+        getName() {
+            return this.name;
+        }
+
+        setBrand(brand) {
+            this.brand = brand;
+        }
+
+        getBrand() {
+            return this.brand;
+        }
+        setCost(cost) {
+            this.cost = cost;
+        }
+        getCost() {
+            return this.cost;
+        }
+        toString(Phone) {
+            Phone.getId();
+            Phone.getName();
+            Phone.getBrand();
+            Phone.getCost();
+        }
+    }
+
+    let listphone = [];
+
+    listphone.push(new Phone("01AU", "Iphone X", "Apple", 999));
+    listphone.push(new Phone("016SK", "Samsung Galaxy s21 ", "Samsung", 678));
+    listphone.push(new Phone("01DFCN", "Huawei 4s", "Huawei", 882));
+    listphone.push(new Phone("06CJP", "Nokia lumia 570", "Nokia", 784));
+
+    display(listphone);
+    function display(phone) {
+        let tableString = '<table border="1" style="border-collapse: collapse">\n' +
+            '    <tr>' +
+            '        <th>STT</th>' +
+            '        <th>Mã</th>' +
+            '        <th>Tên</th>' +
+            '        <th>Hãng sản xuất</th>' +
+            '        <th>Giá</th>' +
+            '    </tr>';
+        for (let i = 0; i < phone.length; i++) {
+            tableString += '<tr>' +
+                '        <td>' + (1 + i) + '</td>' +
+                '        <td>' + listphone[i].getId() + '</td>' +
+                '        <td>' + listphone[i].getName() + '</td>' +
+                '        <td>' + listphone[i].getBrand() + '</td>' +
+                '        <td>' + listphone[i].getCost() + '</td>' +
+                '    </tr>';
+        }
+        tableString += '</table>';
+        document.getElementById("result").innerHTML = tableString;
+    }
+
+</script>
+</body>
+</html>

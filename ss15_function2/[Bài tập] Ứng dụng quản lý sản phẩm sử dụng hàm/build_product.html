@@ -41,7 +41,8 @@
     function addProduct() {
         let valu = document.getElementById("value").value;
         arr1.push(valu);
-        b.innerHTML=displayProduct(arr1)
+        b.innerHTML=displayProduct(arr1);
+        document.getElementById("value").value = "  ";
     }
     b.innerHTML=displayProduct(arr1);
 </script>

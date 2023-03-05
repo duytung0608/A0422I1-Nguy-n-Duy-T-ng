@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tìm ước của một số</title>
+</head>
+<body>
+<p>
+    <input type="text" id="number"/>
+    <button type="button" onclick="timUoc();">Hiển thị ước chung của nó</button>
+</p>
+<P id="result"></P>
+<script>
+    function timUoc() {
+        let songuyen = parseInt(document.getElementById("number").value);
+        if(isNaN(songuyen) || songuyen<0) {
+            document.getElementById("result").innerHTML="<h3>Số bạn nhập không phải là số nguyên hoặc bé hơn không xin vui lòng nhập lại!!!</h3>";
+            document.getElementById("number").value = "";
+        } else{
+            for(let i=1;i<=songuyen;i++) {
+                if(songuyen%i==0) {
+                    document.write(i + " ");
+                }
+            }
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>In ra danh sách bệnh nhân</title>
+</head>
+<body>
+<p id="result"></p>
+<script>
+    class Benhnhan {
+        constructor(ten, tuoi, diachi, sdt) {
+            this.ten = ten;
+            this.tuoi = tuoi;
+            this.diachi = diachi;
+            this.sdt = sdt;
+        }
+
+        setTen(ten) {
+            this.ten = ten;
+        }
+
+        getTen() {
+            return this.ten;
+        }
+
+        setTuoi(tuoi) {
+            this.tuoi = tuoi;
+        }
+
+        getTuoi() {
+            return this.tuoi;
+        }
+
+        setDiaChi(diachi) {
+            this.diachi = diachi;
+        }
+
+        getDiaChi() {
+            return this.diachi;
+        }
+        setSdt(sdt) {
+            this.sdt = sdt;
+        }
+        getSdt() {
+            return this.sdt;
+        }
+    }
+
+    let danhSachBenhNhan = [];
+
+    danhSachBenhNhan.push(new Benhnhan("Nguyễn Lê Hoàng Oanh", 20, "Quảng Nam", 0923434564));
+    danhSachBenhNhan.push(new Benhnhan("Nguyễn Trần Cảnh", 30, "Quảng Nam", 0943246324));
+    danhSachBenhNhan.push(new Benhnhan("Hoàng Thanh Hùng", 15, "Quảng Nam", 0123451235));
+    danhSachBenhNhan.push(new Benhnhan("Trần Lệ Quyên", 19, "Quảng Nam", 0923093748));
+
+    display(danhSachBenhNhan);
+    function display(benhnhan) {
+        let tableString = '<table border="1" style="border-collapse: collapse">\n' +
+            '    <tr>' +
+            '        <th>STT</th>' +
+            '        <th>Họ và tên</th>' +
+            '        <th>Tuổi</th>' +
+            '        <th>Địa chỉ</th>' +
+            '        <th>Số điện thoại</th>' +
+            '    </tr>';
+        for (let i = 0; i < benhnhan.length; i++) {
+            tableString += '<tr>' +
+                '        <td>' + (1 + i) + '</td>' +
+                '        <td>' + danhSachBenhNhan[i].getTen() + '</td>' +
+                '        <td>' + danhSachBenhNhan[i].getTuoi() + '</td>' +
+                '        <td>' + danhSachBenhNhan[i].getDiaChi() + '</td>' +
+                '        <td>' + danhSachBenhNhan[i].getSdt() + '</td>' +
+                '    </tr>';
+        }
+        tableString += '</table>';
+        document.getElementById("result").innerHTML = tableString;
+    }
+
+</script>
+</body>
+</html>

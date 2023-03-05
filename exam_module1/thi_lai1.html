@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 1</title>
+</head>
+<body>
+<p id="result"></p>
+<script>
+    let long = parseInt(prompt("hãy nhập đọ dài mảng mà bạn muốn!!"));
+    let A = new Array();
+    let sum1 = 0;
+    let sum2 = 0;
+    if(long>20) {
+        document.getElementById("result").innerHTML = "<h3>Hãy nhập độ dài bé hơn hoặc bằng 20</h3>";
+    }else{
+        for(let i=0;i<long;i++) {
+            let number = parseInt(prompt("hãy nhập phần tử cho "+"A["+i+"]"));
+            A[i] = number;
+        }
+        for(let i=0;i<A.length;i++){
+            if(A[i]%2==0){
+                sum1+=A[i];
+            }else{
+                sum2+=A[i];
+            }
+        }
+        let answer = sum1-sum2;
+        alert("Tổng các số chẵn là "+sum1);
+        alert("Tổng các số lẻ là "+sum2);
+        alert("Hiệu của tổng các số chẵn và tổng các số lẻ là "+answer);
+
+    }
+</script>
+</body>
+</html>

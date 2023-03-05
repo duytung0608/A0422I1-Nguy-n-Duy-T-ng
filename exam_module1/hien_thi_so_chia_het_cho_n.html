@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hiển thị ra số chia hết cho n trong mảng arr</title>
+</head>
+<body>
+<table>
+    <input type="text" id="txtvalue"/>
+    <input type="button" id="btnadd" value="Add" onclick="add_element_to_array();"/>
+    <input type="button" id="btindex" value="In ra mảng A[index_min,index_max]" onclick="displayNumber();"/>
+    <div id="result"></div>
+</table>
+<script>
+    let x = 0;
+    let array = Array();
+    function add_element_to_array() {
+        array[x]=document.getElementById("txtvalue").value;
+        alert("Element: " + array[x] + " Added at index " + x);
+        x++;
+        document.getElementById("txtvalue").value = "";
+    }
+    let count =0;
+    function displayNumber() {
+        let number = parseInt(prompt("Hãy nhập vào số nguyên n:"));
+        for(let i=0;i<array.length;i++) {
+            if(array[i]%number==0){
+                count++;
+            }
+        }
+        alert("Mảng mà bạn đã nhập có giá trị là:\n" + array);
+        alert("Số chia hết cho n có trong mảng là n:\n" + count);
+    }
+</script>
+</body>
+</html>

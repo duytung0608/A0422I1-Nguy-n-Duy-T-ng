@@ -1,32 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <title>Product</title>
 </head>
 <body>
 <h1>Add new Product</h1>
-<table>
-    <tr>
+<form boder="1">
+    <p>
         <th>Name</th>
         <th>ID</th>
         <th>Cost</th>
-    </tr>
-    <tr>
+    </p>
+    <p>
         <td><input type="text" id="name"></td>
         <td><input type="text" id="id"></td>
         <td><input type="text" id="cost"></td>
         <td><button type="button" onclick="addNewProduct();">Add newProduct</button></td>
-    </tr>
+    </p>
     <p id="result"></p>
-</table>
+</form>
 <script>
-    let A = [];
-    let sum = "<table>";
-    sum += "<tr>" + "<th>" + "STT" + "</th>";
-    sum += "<th>" + "NAME" + "</th>";
-    sum += "<th>" + "ID" + "</th>";
-    sum += "<th>" + "COST" + "</th>";
     class Product {
      constructor(name, id, cost) {
          this.name = name;
@@ -51,16 +45,50 @@
      setCost(newcost) {
          this.cost = newcost;
      }
- }
- function pushArray(A,B) {
-        return A.push(B);
- }
- function displayProduct(A) {
-    for(let i=0;i<A.length;i++) {
-        sum += "<tr>" + "<td>" + A[i].this.name + "</td>";
-        sum += "<td>" + A[i].this.id
     }
- }
+    let b = document.getElementById("result");
+    /*sum += "<tr>" + "<th>" + "STT" + "</th>";
+    sum += "<th>" + "NAME" + "</th>";
+    sum += "<th>" + "ID" + "</th>";
+    sum += "<th>" + "COST" + "</th>";*/
+    let A = new Array();
+    let sp1 = new Product("Samsung",001,999);
+    A.push(sp1);
+    let sp2 = new Product("Iphone",001,1022);
+    A.push(sp2);
+    function pushArray(A,name,id,cost) {
+        let b = new Product(name,id,cost);
+        A.push(b);
+    }
+    function displayProduct(A) {
+        let sum = "<table border='1' width='800' cellpadding='1' cellspacing='0'>";
+        for(let i=0;i<A.length;i++) {
+            sum += "<tr>";
+            sum += "<td>" + (i+1) + "</td>";
+            sum += "<td>" + A[i].getName() + "</td>";
+            sum += "<td>" + A[i].getId() + "</td>";
+            sum += "<td>" + A[i].getCost() + "</td>";
+            sum += "<td>" + "<button type='button' onclick='deleteProduct("+i+");'>Delete</button>"+ "</td>";
+            sum += "</tr>";
+        }
+        return sum;
+    }
+    function addNewProduct() {
+        let name = document.getElementById("name").value;
+        let id = document.getElementById("id").value;
+        let cost = document.getElementById("cost").value;
+        pushArray(A, name, id, cost);
+        b.innerHTML=displayProduct(A);
+        document.getElementById("name").value = "";
+        document.getElementById("id").value = "";
+        document.getElementById("cost").value = "";
+    }
+    function deleteProduct(index) {
+        A.splice(index,1);
+        b.innerHTML=displayProduct(A);
+    }
+    b.innerHTML=displayProduct(A);
+
 </script>
 </body>
 </html>
